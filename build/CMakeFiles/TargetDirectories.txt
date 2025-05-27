@@ -1,0 +1,5 @@
+/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/build/CMakeFiles/Dashboard.dir
+/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/build/CMakeFiles/edit_cache.dir
+/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/build/CMakeFiles/rebuild_cache.dir
+/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/build/CMakeFiles/Dashboard_autogen_timestamp_deps.dir
+/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/build/CMakeFiles/Dashboard_autogen.dir

@@ -5,9 +5,9 @@
 ### 🔹 Monitoramento de Processos
 - [ ] Exibir dados globais do processador (uso da CPU, tempo ocioso)
 - [ ] Exibir total de processos e threads em execução
-- [ ] Listar todos os processos existentes
-- [ ] Mostrar o usuário associado a cada processo
-- [ ] Mostrar informações sobre os threads de cada processo
+- [X] Listar todos os processos existentes
+- [X] Mostrar o usuário associado a cada processo
+- [X] Mostrar informações sobre os threads de cada processo
 - [ ] Mostrar informações detalhadas por processo (em tela ou aba separada)
 
 ### 🔹 Monitoramento de Memória
@@ -22,10 +22,10 @@
 
 ## ⚙️ Requisitos Técnicos Obrigatórios
 
-- [ ] Atualizar os dados automaticamente a cada 5 segundos
+- [X] Atualizar os dados automaticamente a cada 5 segundos
 - [ ] Permitir visualizar informações globais e individuais dos processos
 - [ ] Apresentar dados processados (nada de saída crua)
-- [ ] Não usar comandos shell como `ps`, `ls`, `du`, etc
-- [ ] Utilizar APIs ou leitura direta do sistema operacional (ex: `/proc` no Linux)
+- [X] Não usar comandos shell como `ps`, `ls`, `du`, etc
+- [X] Utilizar APIs ou leitura direta do sistema operacional (ex: `/proc` no Linux)
 - [ ] Implementar o projeto com **software multitarefa** (ex: threads)
-- [ ] Seguir o padrão de projeto **MVC (Model-View-Controller)**
+- [X] Seguir o padrão de projeto **MVC (Model-View-Controller)**
