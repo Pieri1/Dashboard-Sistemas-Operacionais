@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
-<class>ProcessDetailDialog</class>
-<widget class="QDialog" name="ProcessDetailDialog">
+ <class>ProcessDetailDialog</class>
+ <widget class="QDialog" name="ProcessDetailDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>259</width>
-    <height>400</height>
+    <width>260</width>
+    <height>433</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -94,6 +94,13 @@
        <widget class="QLabel" name="lblFiles">
         <property name="text">
          <string>Arquivos abertos:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="lblPages">
+        <property name="text">
+         <string>Paginas:</string>
         </property>
        </widget>
       </item>

@@ -9,18 +9,18 @@ ProcessDetailDialog::ProcessDetailDialog(QWidget *parent)
 }
 
 void ProcessDetailDialog::setProcessDetails(const ProcessDetails& d) {
-    ui->lblPId->setText(QString::number(d.pid));
-    ui->lblName->setText(QString::fromStdString(d.name));
-    ui->lblUser->setText(QString::fromStdString(d.user));
-    ui->lblThreads->setText(QString::number(d.threads));
-    ui->lblState->setText(QString::fromStdString(d.state));
-    ui->lblParent->setText(QString::number(d.ppid));
-    //ui cpu time
-    //ui mem virtual
-    //ui mem ram
-    //ui->lblMem->setText(QString::number(d.memoryMB, 'f', 1) + " MB");
-    ui->lblPriority->setText(QString::number(d.priority));
-    ui->lblFiles->setText(QString::number(d.openFileCount));
+    ui->lblPId->setText("PID: " + QString::number(d.pid));
+    ui->lblName->setText("Nome: " + QString::fromStdString(d.name));
+    ui->lblUser->setText("Usuário: " + QString::fromStdString(d.user));
+    ui->lblThreads->setText("Threads: " + QString::number(d.threads));
+    ui->lblState->setText("Estado: " + QString::fromStdString(d.state));
+    ui->lblParent->setText("PPID: " + QString::number(d.ppid));
+    ui->lblCpuTime->setText("Tempo de CPU: " + QString::number(d.cpuTimeSeconds, 'f', 2) + " s");
+    ui->lblMemVirtual->setText("Memória Virtual: " + QString::number(d.memoryVirtualMB, 'f', 1) + " MB");
+    ui->lblMemRam->setText("Memória RAM: " + QString::number(d.memoryMB, 'f', 1) + " MB");
+    ui->lblPriority->setText("Prioridade: " + QString::number(d.priority));
+    ui->lblFiles->setText("Arquivos abertos: " + QString::number(d.openFileCount));
+    ui->lblPages->setText("Páginas: " + QString::number(d.pageCount));
 }
 
 

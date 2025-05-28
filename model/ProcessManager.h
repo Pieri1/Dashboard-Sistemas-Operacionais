@@ -10,13 +10,15 @@ struct ProcessDetails {
     int pid;
     std::string name;
     std::string user;
-    std::string cmdline;
     std::string state;
     int threads;
     int ppid;
     long priority;
-    double memoryMB;
+    double memoryMB;         // RAM residente (VmRSS)
+    double memoryVirtualMB;  // Memória virtual (VmSize)
+    double cpuTimeSeconds;   // Tempo de CPU em segundos
     int openFileCount;
+    int pageCount;           // Total de páginas de memória
 };
 
 class ProcessManager {

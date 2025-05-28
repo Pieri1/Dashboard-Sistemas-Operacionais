@@ -36,13 +36,14 @@ public:
     QLabel *lblMemRam;
     QLabel *lblPriority;
     QLabel *lblFiles;
+    QLabel *lblPages;
     QPushButton *btnClose;
 
     void setupUi(QDialog *ProcessDetailDialog)
     {
         if (ProcessDetailDialog->objectName().isEmpty())
             ProcessDetailDialog->setObjectName(QString::fromUtf8("ProcessDetailDialog"));
-        ProcessDetailDialog->resize(259, 400);
+        ProcessDetailDialog->resize(260, 433);
         verticalLayout = new QVBoxLayout(ProcessDetailDialog);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         groupBox = new QGroupBox(ProcessDetailDialog);
@@ -104,6 +105,11 @@ public:
 
         verticalLayout_2->addWidget(lblFiles);
 
+        lblPages = new QLabel(groupBox);
+        lblPages->setObjectName(QString::fromUtf8("lblPages"));
+
+        verticalLayout_2->addWidget(lblPages);
+
 
         verticalLayout->addWidget(groupBox);
 
@@ -133,6 +139,7 @@ public:
         lblMemRam->setText(QCoreApplication::translate("ProcessDetailDialog", "Memoria RAM:", nullptr));
         lblPriority->setText(QCoreApplication::translate("ProcessDetailDialog", "Prioridade:", nullptr));
         lblFiles->setText(QCoreApplication::translate("ProcessDetailDialog", "Arquivos abertos:", nullptr));
+        lblPages->setText(QCoreApplication::translate("ProcessDetailDialog", "Paginas:", nullptr));
         btnClose->setText(QCoreApplication::translate("ProcessDetailDialog", "Fechar", nullptr));
     } // retranslateUi
 

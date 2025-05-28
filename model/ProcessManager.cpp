@@ -163,7 +163,6 @@ ProcessDetails ProcessManager::getProcessDetails(int pid) {
     ProcessDetails details{};
     details.pid = pid;
 
-    // Nome do processo
     std::ifstream statusFile("/proc/" + std::to_string(pid) + "/status");
     std::string line;
     while (std::getline(statusFile, line)) {
@@ -188,27 +187,45 @@ ProcessDetails ProcessManager::getProcessDetails(int pid) {
             iss >> kb;
             details.memoryMB = kb / 1024.0;
         }
+        else if (line.rfind("VmSize:", 0) == 0) {
+            std::istringstream iss(line.substr(7));
+            double kb;
+            iss >> kb;
+            details.memoryVirtualMB = kb / 1024.0;
+        }
+        else if (line.rfind("RssAnon:", 0) == 0) {
+            // Exemplo de contagem de páginas anônimas (opcional)
+            std::istringstream iss(line.substr(8));
+            int kb;
+            iss >> kb;
+            details.pageCount += kb / 4; // 1 página = 4 KB
+        }
+        // Você pode somar outras páginas (RssFile, RssShmem, etc) se quiser detalhar mais
     }
 
-    // Cmdline
-    std::ifstream cmdFile("/proc/" + std::to_string(pid) + "/cmdline");
-    std::getline(cmdFile, details.cmdline);
-
-    // Priority
+    // Tempo de CPU
     std::ifstream statFile("/proc/" + std::to_string(pid) + "/stat");
     std::string token;
-    for (int i = 1; i <= 18; ++i) statFile >> token;
+    for (int i = 1; i <= 13; ++i) statFile >> token;
+    unsigned long utime = 0, stime = 0;
+    statFile >> utime >> stime;
+    long ticks_per_sec = sysconf(_SC_CLK_TCK);
+    details.cpuTimeSeconds = double(utime + stime) / ticks_per_sec;
+
+    // Prioridade
+    for (int i = 15; i <= 17; ++i) statFile >> token;
     statFile >> details.priority;
 
     // Arquivos abertos
-    namespace fs = std::filesystem;
     std::string fdPath = "/proc/" + std::to_string(pid) + "/fd";
     int openFiles = 0;
-    if (fs::exists(fdPath)) {
-        for (auto& entry : fs::directory_iterator(fdPath)) {
-            ++openFiles;
+    try {
+        if (fs::exists(fdPath)) {
+            for (auto& entry : fs::directory_iterator(fdPath)) {
+                ++openFiles;
+            }
         }
-    }
+    } catch (const std::exception&) {}
     details.openFileCount = openFiles;
 
     return details;
