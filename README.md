@@ -3,20 +3,20 @@
 ## 🎯 Funcionalidades Principais
 
 ### 🔹 Monitoramento de Processos
-- [X] Exibir dados globais do processador (uso da CPU, tempo ocioso)
-- [X] Exibir total de processos e threads em execução
+- [ ] Exibir dados globais do processador (uso da CPU, tempo ocioso)
+- [ ] Exibir total de processos e threads em execução
 - [X] Listar todos os processos existentes
 - [X] Mostrar o usuário associado a cada processo
 - [X] Mostrar informações sobre os threads de cada processo
-- [ ] Mostrar informações detalhadas por processo (em tela ou aba separada)
+- [X] Mostrar informações detalhadas por processo (em tela ou aba separada)
 
 ### 🔹 Monitoramento de Memória
 - [X] Exibir uso global da memória RAM (usada, livre, percentual)
-- [ ] Exibir uso de memória virtual (swap)
+- [X] Exibir uso de memória virtual (swap)
 - [ ] Exibir informações detalhadas de memória por processo:
-  - [ ] Total de memória alocada
+  - [X] Total de memória alocada
   - [ ] Páginas de memória (total, código, heap, stack)
-- [ ] Detalhamento em tela ou aba separada (com botão de retorno à tela principal)
+- [X] Detalhamento em tela ou aba separada (com botão de retorno à tela principal)
 
 ---
 
@@ -32,4 +32,6 @@
 
 
 ## Outras coisas a se arrumar?
-0 [ ] Tratamento de erro (sem permissao), para dados de processos
+- [ ] Tratamento de erro (sem permissao), para dados de processos
+- [ ] Mostrar tempo ocioso da CPU e threads em execucao
+- [ ] Mostrar informacoes a mais da pagina (codigo, heap, stack)
