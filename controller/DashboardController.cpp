@@ -1,5 +1,6 @@
 #include "controller/DashboardController.h"
 #include "view/MainWindow.h"
+#include "view/ProcessDetailDialog.h"
 
 DashboardController::DashboardController(MainWindow* mainWindow, QObject* parent)
     : QObject(parent), view(mainWindow) {
@@ -16,4 +17,11 @@ void DashboardController::updateData(){
     view->updateProcessList(list);
     SystemInfo info = processManager.getSystemInfo();
     view->updateSystemInfo(info);
+}
+
+void DashboardController::showProcessDetails(int pid) {
+    ProcessDetails details = processManager.getProcessDetails(pid); // Implemente esse método se não existir
+    ProcessDetailDialog dialog;
+    dialog.setProcessDetails(details);
+    dialog.exec();
 }

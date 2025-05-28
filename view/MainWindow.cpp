@@ -1,12 +1,15 @@
 #include "MainWindow.h"
+#include "view/ProcessDetailDialog.h"
 #include "ui_MainWindow.h"
 #include <QTableWidgetItem>
 #include <QString>
 #include <QDateTime>
+#include "controller/DashboardController.h"
 
-MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent), ui(new Ui::MainWindow) {
+MainWindow::MainWindow(QWidget *parent, DashboardController* controller)
+    : QMainWindow(parent), ui(new Ui::MainWindow), dashboardController(controller) {
     ui->setupUi(this);
+    connect(ui->tblProcess, &QTableWidget::cellDoubleClicked, this, &MainWindow::onProcessRowDoubleClicked);
 }
 
 MainWindow::~MainWindow() {
@@ -39,4 +42,17 @@ void MainWindow::updateSystemInfo(const SystemInfo& info) {
     ui->lblMemUse->setText(QString("Uso de RAM: %1%").arg(QString::number(info.ramUsagePercent, 'f', 2)));
     ui->lblMemFree->setText(QString("RAM Livre: %1 MB").arg(QString::number(info.ramFreeMB, 'f', 1)));
     ui->lblTotalProc->setText(QString("Processos: %1").arg(info.processCount));
+}
+
+void MainWindow::onProcessRowDoubleClicked(int row, int column) {
+    if (row < 0 || row >= ui->tblProcess->rowCount()) return;
+
+    QString pidStr = ui->tblProcess->item(row, 0)->text();
+    int pid = pidStr.toInt();
+
+    dashboardController->showProcessDetails(pid);
+}
+
+void MainWindow::setDashboardController(DashboardController* controller) {
+    dashboardController = controller;
 }

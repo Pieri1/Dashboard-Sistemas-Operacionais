@@ -258,6 +258,12 @@ CMakeFiles/Dashboard.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h \
  /usr/include/c++/13/variant \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qshareddata.h \
+ /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/controller/DashboardController.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h \
  /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/view/MainWindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
@@ -299,11 +305,5 @@ CMakeFiles/Dashboard.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
  /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/ProcessInfo.h \
  /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/SystemInfo.h \
- /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/controller/DashboardController.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h \
- /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/view/MainWindow.h \
- /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/ProcessManager.h
+ /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/ProcessManager.h \
+ /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/view/MainWindow.h

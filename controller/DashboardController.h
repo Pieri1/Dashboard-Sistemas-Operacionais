@@ -12,6 +12,7 @@ class DashboardController : public QObject {
 public:
     explicit DashboardController(MainWindow* mainWindow, QObject* parent = nullptr);
     void start();
+    void showProcessDetails(int pid);
 
 private slots:
     void updateData();

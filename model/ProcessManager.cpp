@@ -10,6 +10,7 @@
 #include <unistd.h>
 #include <sys/stat.h>
 #include <unordered_map>
+#include <vector>
 
 namespace fs = std::filesystem;
 
@@ -156,4 +157,59 @@ SystemInfo ProcessManager::getSystemInfo() {
     info.processCount = count;
 
     return info;
+}
+
+ProcessDetails ProcessManager::getProcessDetails(int pid) {
+    ProcessDetails details{};
+    details.pid = pid;
+
+    // Nome do processo
+    std::ifstream statusFile("/proc/" + std::to_string(pid) + "/status");
+    std::string line;
+    while (std::getline(statusFile, line)) {
+        if (line.rfind("Name:", 0) == 0)
+            details.name = line.substr(6);
+        else if (line.rfind("State:", 0) == 0)
+            details.state = line.substr(6);
+        else if (line.rfind("Threads:", 0) == 0)
+            details.threads = std::stoi(line.substr(8));
+        else if (line.rfind("PPid:", 0) == 0)
+            details.ppid = std::stoi(line.substr(6));
+        else if (line.rfind("Uid:", 0) == 0) {
+            std::istringstream iss(line.substr(5));
+            int uid;
+            iss >> uid;
+            struct passwd* pw = getpwuid(uid);
+            if (pw) details.user = pw->pw_name;
+        }
+        else if (line.rfind("VmRSS:", 0) == 0) {
+            std::istringstream iss(line.substr(6));
+            double kb;
+            iss >> kb;
+            details.memoryMB = kb / 1024.0;
+        }
+    }
+
+    // Cmdline
+    std::ifstream cmdFile("/proc/" + std::to_string(pid) + "/cmdline");
+    std::getline(cmdFile, details.cmdline);
+
+    // Priority
+    std::ifstream statFile("/proc/" + std::to_string(pid) + "/stat");
+    std::string token;
+    for (int i = 1; i <= 18; ++i) statFile >> token;
+    statFile >> details.priority;
+
+    // Arquivos abertos
+    namespace fs = std::filesystem;
+    std::string fdPath = "/proc/" + std::to_string(pid) + "/fd";
+    int openFiles = 0;
+    if (fs::exists(fdPath)) {
+        for (auto& entry : fs::directory_iterator(fdPath)) {
+            ++openFiles;
+        }
+    }
+    details.openFileCount = openFiles;
+
+    return details;
 }

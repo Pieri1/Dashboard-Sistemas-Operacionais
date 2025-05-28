@@ -1,5 +1,8 @@
 /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/build/Dashboard_autogen/OTUN7GXZT4/moc_ProcessDetailDialog.cpp: /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/view/ProcessDetailDialog.h \
   /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/build/Dashboard_autogen/moc_predefs.h \
+  /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/ProcessInfo.h \
+  /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/ProcessManager.h \
+  /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/SystemInfo.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/assert.h \

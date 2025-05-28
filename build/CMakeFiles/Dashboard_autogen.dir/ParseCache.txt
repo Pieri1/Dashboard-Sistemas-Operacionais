@@ -10,6 +10,9 @@
 /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/view/ProcessDetailDialog.h
  mmc:Q_OBJECT
  mdp:/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/build/Dashboard_autogen/moc_predefs.h
+ mdp:/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/ProcessInfo.h
+ mdp:/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/ProcessManager.h
+ mdp:/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/SystemInfo.h
  mdp:/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/view/ProcessDetailDialog.h
  mdp:/usr/include/asm-generic/errno-base.h
  mdp:/usr/include/asm-generic/errno.h

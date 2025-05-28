@@ -288,6 +288,10 @@ CMakeFiles/Dashboard.dir/view/MainWindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
  /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/ProcessInfo.h \
  /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/SystemInfo.h \
+ /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/view/ProcessDetailDialog.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialog \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h \
+ /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/ProcessManager.h \
  /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/build/Dashboard_autogen/include/ui_MainWindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
@@ -348,4 +352,11 @@ CMakeFiles/Dashboard.dir/view/MainWindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QDateTime \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatetime.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatetime.h \
+ /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/controller/DashboardController.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h \
+ /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/view/MainWindow.h

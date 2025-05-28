@@ -29,3 +29,7 @@
 - [X] Utilizar APIs ou leitura direta do sistema operacional (ex: `/proc` no Linux)
 - [ ] Implementar o projeto com **software multitarefa** (ex: threads)
 - [X] Seguir o padrão de projeto **MVC (Model-View-Controller)**
+
+
+## Outras coisas a se arrumar?
+0 [ ] Tratamento de erro (sem permissao), para dados de processos

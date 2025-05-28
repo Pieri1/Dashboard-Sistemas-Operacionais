@@ -284,6 +284,9 @@ CMakeFiles/Dashboard.dir/view/ProcessDetailDialog.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qcursor.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h \
+ /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/ProcessManager.h \
+ /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/ProcessInfo.h \
+ /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/SystemInfo.h \
  /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/build/Dashboard_autogen/include/ui_ProcessDetailDialog.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \

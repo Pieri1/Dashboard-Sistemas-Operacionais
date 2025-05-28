@@ -3,6 +3,7 @@
 
 #include <string>
 
+
 class ProcessInfo {
 public:
     ProcessInfo(int pid = 0, const std::string& name = "", const std::string& user = "",
@@ -37,6 +38,7 @@ private:
     double memoryMB;
     int threads;
     std::string state;
+    ProcessInfo getProcessDetails(int pid);
 };
 
 #endif

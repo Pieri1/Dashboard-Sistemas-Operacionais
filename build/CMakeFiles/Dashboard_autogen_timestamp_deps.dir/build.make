@@ -67,8 +67,8 @@ include CMakeFiles/Dashboard_autogen_timestamp_deps.dir/compiler_depend.make
 include CMakeFiles/Dashboard_autogen_timestamp_deps.dir/progress.make
 
 CMakeFiles/Dashboard_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.13
-CMakeFiles/Dashboard_autogen_timestamp_deps: /usr/lib/qt5/bin/uic
 CMakeFiles/Dashboard_autogen_timestamp_deps: /usr/lib/qt5/bin/moc
+CMakeFiles/Dashboard_autogen_timestamp_deps: /usr/lib/qt5/bin/uic
 
 Dashboard_autogen_timestamp_deps: CMakeFiles/Dashboard_autogen_timestamp_deps
 Dashboard_autogen_timestamp_deps: CMakeFiles/Dashboard_autogen_timestamp_deps.dir/build.make
