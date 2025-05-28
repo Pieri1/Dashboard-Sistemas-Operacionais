@@ -37,3 +37,5 @@
 - [ ] Mostrar informacoes a mais da pagina (codigo, heap, stack)
 - [ ] Verificar se saidas estao corretas
 - [ ] Criacao de Threads
+- [ ] Criacao de comentarios
+- [ ] Criacao do PDF de Documentacao
