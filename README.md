@@ -35,3 +35,5 @@
 - [ ] Tratamento de erro (sem permissao), para dados de processos
 - [ ] Mostrar tempo ocioso da CPU e threads em execucao
 - [ ] Mostrar informacoes a mais da pagina (codigo, heap, stack)
+- [ ] Verificar se saidas estao corretas
+- [ ] Criacao de Threads
