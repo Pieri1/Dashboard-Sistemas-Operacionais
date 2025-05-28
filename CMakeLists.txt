@@ -20,6 +20,7 @@ set(SOURCES
     view/ProcessDetailDialog.ui
     controller/DashboardController.cpp
     controller/DashboardController.h
+    model/Worker.cpp
     model/ProcessInfo.cpp
     model/ProcessInfo.h
     model/SystemInfo.cpp

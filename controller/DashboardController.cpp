@@ -1,10 +1,26 @@
 #include "controller/DashboardController.h"
 #include "view/MainWindow.h"
 #include "view/ProcessDetailDialog.h"
+#include "model/Worker.h"
+#include <QThread>
 
 DashboardController::DashboardController(MainWindow* mainWindow, QObject* parent)
     : QObject(parent), view(mainWindow) {
-    connect(&timer, &QTimer::timeout, this, &DashboardController::updateData);
+    workerThread = new QThread(this);
+    worker = new Worker(&processManager);
+    worker->moveToThread(workerThread);
+
+    connect(workerThread, &QThread::started, worker, &Worker::start);
+    connect(worker, &Worker::processListReady, view, &MainWindow::updateProcessList);
+    connect(worker, &Worker::systemInfoReady, view, &MainWindow::updateSystemInfo);
+
+    workerThread->start();
+}
+
+DashboardController::~DashboardController() {
+    workerThread->quit();
+    workerThread->wait();
+    delete worker;
 }
 
 void DashboardController::start() {

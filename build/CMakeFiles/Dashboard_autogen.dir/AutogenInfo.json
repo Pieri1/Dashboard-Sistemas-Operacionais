@@ -234,6 +234,12 @@
 			null
 		],
 		[
+			"/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/Worker.h",
+			"MU",
+			"NLOY5YBGEN/moc_Worker.cpp",
+			null
+		],
+		[
 			"/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/view/MainWindow.h",
 			"MU",
 			"OTUN7GXZT4/moc_MainWindow.cpp",
@@ -329,6 +335,11 @@
 		],
 		[
 			"/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/SystemInfo.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/Worker.cpp",
 			"MU",
 			null
 		],

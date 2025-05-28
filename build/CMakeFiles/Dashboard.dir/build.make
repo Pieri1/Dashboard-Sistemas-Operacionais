@@ -146,10 +146,24 @@ CMakeFiles/Dashboard.dir/controller/DashboardController.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Dashboard.dir/controller/DashboardController.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/controller/DashboardController.cpp -o CMakeFiles/Dashboard.dir/controller/DashboardController.cpp.s
 
+CMakeFiles/Dashboard.dir/model/Worker.cpp.o: CMakeFiles/Dashboard.dir/flags.make
+CMakeFiles/Dashboard.dir/model/Worker.cpp.o: /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/Worker.cpp
+CMakeFiles/Dashboard.dir/model/Worker.cpp.o: CMakeFiles/Dashboard.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Dashboard.dir/model/Worker.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Dashboard.dir/model/Worker.cpp.o -MF CMakeFiles/Dashboard.dir/model/Worker.cpp.o.d -o CMakeFiles/Dashboard.dir/model/Worker.cpp.o -c /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/Worker.cpp
+
+CMakeFiles/Dashboard.dir/model/Worker.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Dashboard.dir/model/Worker.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/Worker.cpp > CMakeFiles/Dashboard.dir/model/Worker.cpp.i
+
+CMakeFiles/Dashboard.dir/model/Worker.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Dashboard.dir/model/Worker.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/Worker.cpp -o CMakeFiles/Dashboard.dir/model/Worker.cpp.s
+
 CMakeFiles/Dashboard.dir/model/ProcessInfo.cpp.o: CMakeFiles/Dashboard.dir/flags.make
 CMakeFiles/Dashboard.dir/model/ProcessInfo.cpp.o: /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/ProcessInfo.cpp
 CMakeFiles/Dashboard.dir/model/ProcessInfo.cpp.o: CMakeFiles/Dashboard.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Dashboard.dir/model/ProcessInfo.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Dashboard.dir/model/ProcessInfo.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Dashboard.dir/model/ProcessInfo.cpp.o -MF CMakeFiles/Dashboard.dir/model/ProcessInfo.cpp.o.d -o CMakeFiles/Dashboard.dir/model/ProcessInfo.cpp.o -c /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/ProcessInfo.cpp
 
 CMakeFiles/Dashboard.dir/model/ProcessInfo.cpp.i: cmake_force
@@ -163,7 +177,7 @@ CMakeFiles/Dashboard.dir/model/ProcessInfo.cpp.s: cmake_force
 CMakeFiles/Dashboard.dir/model/SystemInfo.cpp.o: CMakeFiles/Dashboard.dir/flags.make
 CMakeFiles/Dashboard.dir/model/SystemInfo.cpp.o: /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/SystemInfo.cpp
 CMakeFiles/Dashboard.dir/model/SystemInfo.cpp.o: CMakeFiles/Dashboard.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Dashboard.dir/model/SystemInfo.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Dashboard.dir/model/SystemInfo.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Dashboard.dir/model/SystemInfo.cpp.o -MF CMakeFiles/Dashboard.dir/model/SystemInfo.cpp.o.d -o CMakeFiles/Dashboard.dir/model/SystemInfo.cpp.o -c /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/SystemInfo.cpp
 
 CMakeFiles/Dashboard.dir/model/SystemInfo.cpp.i: cmake_force
@@ -177,7 +191,7 @@ CMakeFiles/Dashboard.dir/model/SystemInfo.cpp.s: cmake_force
 CMakeFiles/Dashboard.dir/model/ProcessManager.cpp.o: CMakeFiles/Dashboard.dir/flags.make
 CMakeFiles/Dashboard.dir/model/ProcessManager.cpp.o: /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/ProcessManager.cpp
 CMakeFiles/Dashboard.dir/model/ProcessManager.cpp.o: CMakeFiles/Dashboard.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Dashboard.dir/model/ProcessManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Dashboard.dir/model/ProcessManager.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Dashboard.dir/model/ProcessManager.cpp.o -MF CMakeFiles/Dashboard.dir/model/ProcessManager.cpp.o.d -o CMakeFiles/Dashboard.dir/model/ProcessManager.cpp.o -c /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/ProcessManager.cpp
 
 CMakeFiles/Dashboard.dir/model/ProcessManager.cpp.i: cmake_force
@@ -195,6 +209,7 @@ Dashboard_OBJECTS = \
 "CMakeFiles/Dashboard.dir/view/MainWindow.cpp.o" \
 "CMakeFiles/Dashboard.dir/view/ProcessDetailDialog.cpp.o" \
 "CMakeFiles/Dashboard.dir/controller/DashboardController.cpp.o" \
+"CMakeFiles/Dashboard.dir/model/Worker.cpp.o" \
 "CMakeFiles/Dashboard.dir/model/ProcessInfo.cpp.o" \
 "CMakeFiles/Dashboard.dir/model/SystemInfo.cpp.o" \
 "CMakeFiles/Dashboard.dir/model/ProcessManager.cpp.o"
@@ -207,6 +222,7 @@ Dashboard: CMakeFiles/Dashboard.dir/main.cpp.o
 Dashboard: CMakeFiles/Dashboard.dir/view/MainWindow.cpp.o
 Dashboard: CMakeFiles/Dashboard.dir/view/ProcessDetailDialog.cpp.o
 Dashboard: CMakeFiles/Dashboard.dir/controller/DashboardController.cpp.o
+Dashboard: CMakeFiles/Dashboard.dir/model/Worker.cpp.o
 Dashboard: CMakeFiles/Dashboard.dir/model/ProcessInfo.cpp.o
 Dashboard: CMakeFiles/Dashboard.dir/model/SystemInfo.cpp.o
 Dashboard: CMakeFiles/Dashboard.dir/model/ProcessManager.cpp.o
@@ -215,7 +231,7 @@ Dashboard: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.13
 Dashboard: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.13
 Dashboard: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.13
 Dashboard: CMakeFiles/Dashboard.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable Dashboard"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable Dashboard"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Dashboard.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

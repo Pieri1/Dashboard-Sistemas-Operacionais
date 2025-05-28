@@ -299,6 +299,30 @@ model/SystemInfo.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Dashboard.dir/build.make CMakeFiles/Dashboard.dir/model/SystemInfo.cpp.s
 .PHONY : model/SystemInfo.cpp.s
 
+model/Worker.o: model/Worker.cpp.o
+.PHONY : model/Worker.o
+
+# target to build an object file
+model/Worker.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Dashboard.dir/build.make CMakeFiles/Dashboard.dir/model/Worker.cpp.o
+.PHONY : model/Worker.cpp.o
+
+model/Worker.i: model/Worker.cpp.i
+.PHONY : model/Worker.i
+
+# target to preprocess a source file
+model/Worker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Dashboard.dir/build.make CMakeFiles/Dashboard.dir/model/Worker.cpp.i
+.PHONY : model/Worker.cpp.i
+
+model/Worker.s: model/Worker.cpp.s
+.PHONY : model/Worker.s
+
+# target to generate assembly for a file
+model/Worker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Dashboard.dir/build.make CMakeFiles/Dashboard.dir/model/Worker.cpp.s
+.PHONY : model/Worker.cpp.s
+
 view/MainWindow.o: view/MainWindow.cpp.o
 .PHONY : view/MainWindow.o
 
@@ -376,6 +400,9 @@ help:
 	@echo "... model/SystemInfo.o"
 	@echo "... model/SystemInfo.i"
 	@echo "... model/SystemInfo.s"
+	@echo "... model/Worker.o"
+	@echo "... model/Worker.i"
+	@echo "... model/Worker.s"
 	@echo "... view/MainWindow.o"
 	@echo "... view/MainWindow.i"
 	@echo "... view/MainWindow.s"

@@ -14,6 +14,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Dashboard.dir/model/ProcessManager.cpp.o.d"
   "CMakeFiles/Dashboard.dir/model/SystemInfo.cpp.o"
   "CMakeFiles/Dashboard.dir/model/SystemInfo.cpp.o.d"
+  "CMakeFiles/Dashboard.dir/model/Worker.cpp.o"
+  "CMakeFiles/Dashboard.dir/model/Worker.cpp.o.d"
   "CMakeFiles/Dashboard.dir/view/MainWindow.cpp.o"
   "CMakeFiles/Dashboard.dir/view/MainWindow.cpp.o.d"
   "CMakeFiles/Dashboard.dir/view/ProcessDetailDialog.cpp.o"

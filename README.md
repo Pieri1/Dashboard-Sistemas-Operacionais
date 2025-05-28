@@ -31,11 +31,11 @@
 - [X] Seguir o padrão de projeto **MVC (Model-View-Controller)**
 
 
-## Outras coisas a se arrumar?
-- [ ] Tratamento de erro (sem permissao), para dados de processos
-- [ ] Mostrar tempo ocioso da CPU e threads em execucao
-- [ ] Mostrar informacoes a mais da pagina (codigo, heap, stack)
-- [ ] Verificar se saidas estao corretas
-- [ ] Criacao de Threads
-- [ ] Criacao de comentarios
-- [ ] Criacao do PDF de Documentacao
+## Resta fazer
+- Tratamento de erro (sem permissao), para dados de processos
+- Mostrar tempo ocioso da CPU e threads em execucao
+- Mostrar informacoes a mais da pagina (codigo, heap, stack)
+- Verificar se saidas estao corretas
+- Criacao de Threads
+- Criacao de comentarios
+- Criacao do PDF de Documentacao

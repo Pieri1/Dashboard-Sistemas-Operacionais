@@ -15,6 +15,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/ProcessInfo.cpp" "CMakeFiles/Dashboard.dir/model/ProcessInfo.cpp.o" "gcc" "CMakeFiles/Dashboard.dir/model/ProcessInfo.cpp.o.d"
   "/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/ProcessManager.cpp" "CMakeFiles/Dashboard.dir/model/ProcessManager.cpp.o" "gcc" "CMakeFiles/Dashboard.dir/model/ProcessManager.cpp.o.d"
   "/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/SystemInfo.cpp" "CMakeFiles/Dashboard.dir/model/SystemInfo.cpp.o" "gcc" "CMakeFiles/Dashboard.dir/model/SystemInfo.cpp.o.d"
+  "/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/Worker.cpp" "CMakeFiles/Dashboard.dir/model/Worker.cpp.o" "gcc" "CMakeFiles/Dashboard.dir/model/Worker.cpp.o.d"
   "/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/view/MainWindow.cpp" "CMakeFiles/Dashboard.dir/view/MainWindow.cpp.o" "gcc" "CMakeFiles/Dashboard.dir/view/MainWindow.cpp.o.d"
   "/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/view/ProcessDetailDialog.cpp" "CMakeFiles/Dashboard.dir/view/ProcessDetailDialog.cpp.o" "gcc" "CMakeFiles/Dashboard.dir/view/ProcessDetailDialog.cpp.o.d"
   )

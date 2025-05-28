@@ -15,6 +15,8 @@ Dashboard_autogen/timestamp: /home/vboxuser/Documents/Projetos/Dashboard-Sistema
   /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/ProcessManager.h \
   /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/SystemInfo.cpp \
   /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/SystemInfo.h \
+  /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/Worker.cpp \
+  /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/Worker.h \
   /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/view/MainWindow.cpp \
   /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/view/MainWindow.h \
   /home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/view/MainWindow.ui \
@@ -149,6 +151,7 @@ Dashboard_autogen/timestamp: /home/vboxuser/Documents/Projetos/Dashboard-Sistema
   /usr/include/c++/13/ext/string_conversions.h \
   /usr/include/c++/13/ext/type_traits.h \
   /usr/include/c++/13/functional \
+  /usr/include/c++/13/future \
   /usr/include/c++/13/initializer_list \
   /usr/include/c++/13/ios \
   /usr/include/c++/13/iosfwd \
@@ -262,6 +265,7 @@ Dashboard_autogen/timestamp: /home/vboxuser/Documents/Projetos/Dashboard-Sistema
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QThread \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h \
@@ -277,6 +281,8 @@ Dashboard_autogen/timestamp: /home/vboxuser/Documents/Projetos/Dashboard-Sistema
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainerfwd.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainertools_impl.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdeadlinetimer.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qelapsedtimer.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qgenericatomic.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h \
@@ -316,6 +322,7 @@ Dashboard_autogen/timestamp: /home/vboxuser/Documents/Projetos/Dashboard-Sistema
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qsysinfo.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qtcore-config.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qthread.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h \
@@ -546,8 +553,6 @@ Dashboard_autogen/timestamp: /home/vboxuser/Documents/Projetos/Dashboard-Sistema
 
 /usr/share/cmake-3.28/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake:
 
-/usr/share/cmake-3.28/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake:
-
 /usr/share/cmake-3.28/Modules/Compiler/HP-CXX-DetermineCompiler.cmake:
 
 /usr/share/cmake-3.28/Modules/Compiler/GNU-FindBinUtils.cmake:
@@ -642,8 +647,6 @@ Dashboard_autogen/timestamp: /home/vboxuser/Documents/Projetos/Dashboard-Sistema
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h:
-
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h:
@@ -694,6 +697,8 @@ Dashboard_autogen/timestamp: /home/vboxuser/Documents/Projetos/Dashboard-Sistema
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h:
 
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qthread.h:
+
 /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbGlxIntegrationPlugin.cmake:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qtcore-config.h:
@@ -726,8 +731,6 @@ Dashboard_autogen/timestamp: /home/vboxuser/Documents/Projetos/Dashboard-Sistema
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qnumeric.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h:
-
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h:
@@ -743,6 +746,12 @@ Dashboard_autogen/timestamp: /home/vboxuser/Documents/Projetos/Dashboard-Sistema
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qelapsedtimer.h:
+
+/usr/share/cmake-3.28/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qdeadlinetimer.h:
 
 /usr/share/cmake-3.28/Modules/Compiler/Cray-DetermineCompiler.cmake:
 
@@ -780,6 +789,10 @@ Dashboard_autogen/timestamp: /home/vboxuser/Documents/Projetos/Dashboard-Sistema
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer:
 
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QThread:
+
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringliteral.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject:
@@ -788,7 +801,7 @@ Dashboard_autogen/timestamp: /home/vboxuser/Documents/Projetos/Dashboard-Sistema
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h:
 
-/usr/include/c++/13/cctype:
+/usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h:
 
 /usr/include/c++/13/bits/uses_allocator_args.h:
 
@@ -864,6 +877,10 @@ Dashboard_autogen/timestamp: /home/vboxuser/Documents/Projetos/Dashboard-Sistema
 
 /usr/include/c++/13/cstddef:
 
+/usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
+
 /usr/include/c++/13/bits/uses_allocator.h:
 
 /usr/include/c++/13/bits/std_abs.h:
@@ -932,17 +949,7 @@ Dashboard_autogen/timestamp: /home/vboxuser/Documents/Projetos/Dashboard-Sistema
 
 /usr/include/c++/13/bits/iterator_concepts.h:
 
-/usr/include/c++/13/backward/binders.h:
-
-/usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c:
-
-/usr/include/c++/13/bits/exception_ptr.h:
-
-/usr/include/c++/13/bits/uniform_int_dist.h:
-
-/usr/include/c++/13/bits/locale_classes.tcc:
-
-/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/SystemInfo.cpp:
+/usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h:
 
 /usr/share/cmake-3.28/Modules/Compiler/IAR-DetermineCompiler.cmake:
 
@@ -994,6 +1001,14 @@ Dashboard_autogen/timestamp: /home/vboxuser/Documents/Projetos/Dashboard-Sistema
 
 /usr/include/c++/13/iosfwd:
 
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h:
+
+/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/Worker.cpp:
+
+/usr/include/c++/13/bits/functexcept.h:
+
+/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
+
 /usr/share/cmake-3.28/Modules/Compiler/PGI-DetermineCompiler.cmake:
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qcolor.h:
@@ -1005,12 +1020,6 @@ Dashboard_autogen/timestamp: /home/vboxuser/Documents/Projetos/Dashboard-Sistema
 /usr/include/c++/13/bits/exception_defines.h:
 
 CMakeFiles/3.28.3/CMakeSystem.cmake:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h:
-
-/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/ProcessInfo.h:
-
-/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/SystemInfo.h:
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
@@ -1028,9 +1037,41 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 
 /usr/include/c++/13/bits/node_handle.h:
 
-/usr/include/c++/13/bits/functexcept.h:
+/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/SystemInfo.cpp:
 
-/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
+/usr/include/c++/13/bits/uniform_int_dist.h:
+
+/usr/include/c++/13/bits/locale_classes.tcc:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevTouchScreenPlugin.cmake:
+
+/usr/include/c++/13/bits/ranges_algo.h:
+
+/usr/include/c++/13/bits/invoke.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h:
+
+/usr/include/x86_64-linux-gnu/bits/environments.h:
+
+/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/view/ProcessDetailDialog.cpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qregion.h:
+
+/usr/include/c++/13/bits/basic_ios.h:
+
+/usr/include/x86_64-linux-gnu/bits/time64.h:
+
+/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/Worker.h:
+
+/usr/share/cmake-3.28/Modules/CMakeDetermineCompiler.cmake:
+
+/usr/include/c++/13/map:
+
+/usr/include/c++/13/string_view:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake:
+
+/usr/include/features-time64.h:
 
 /usr/include/c++/13/bits/erase_if.h:
 
@@ -1043,12 +1084,6 @@ Dashboard_autogen/moc_predefs.h:
 /usr/share/cmake-3.28/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake:
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
-
-/usr/include/assert.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qsysinfo.h:
-
-/usr/include/c++/13/backward/auto_ptr.h:
 
 CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 
@@ -1112,27 +1147,31 @@ CMakeFiles/3.28.3/CMakeCCompiler.cmake:
 
 /usr/include/c++/13/bits/basic_string.tcc:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
+/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/SystemInfo.h:
 
-/usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h:
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h:
+
+/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/model/ProcessInfo.h:
+
+/usr/include/c++/13/backward/binders.h:
+
+/usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c:
+
+/usr/include/c++/13/bits/exception_ptr.h:
+
+/usr/include/assert.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qsysinfo.h:
+
+/usr/include/c++/13/backward/auto_ptr.h:
 
 /usr/include/c++/13/bits/basic_ios.tcc:
 
 /usr/include/c++/13/pstl/execution_defs.h:
 
-/usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h:
+/usr/include/wchar.h:
 
-/usr/include/c++/13/optional:
-
-/usr/include/c++/13/bits/vector.tcc:
-
-/usr/include/x86_64-linux-gnu/qt5/QtGui/qregion.h:
-
-/usr/include/c++/13/bits/basic_ios.h:
-
-/home/vboxuser/Documents/Projetos/Dashboard-Sistemas-Operacionais/view/ProcessDetailDialog.cpp:
-
-/usr/include/x86_64-linux-gnu/bits/time64.h:
+/usr/include/c++/13/bits/shared_ptr_base.h:
 
 /usr/include/c++/13/atomic:
 
@@ -1146,19 +1185,13 @@ CMakeFiles/3.28.3/CMakeCCompiler.cmake:
 
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
 
-/usr/include/c++/13/bits/shared_ptr_base.h:
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qfontmetrics.h:
 
-/usr/include/wchar.h:
+/usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h:
 
-/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevTouchScreenPlugin.cmake:
+/usr/include/c++/13/bits/std_function.h:
 
-/usr/include/c++/13/bits/ranges_algo.h:
-
-/usr/include/c++/13/bits/invoke.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h:
-
-/usr/include/x86_64-linux-gnu/bits/environments.h:
+/usr/include/c++/13/bits/char_traits.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h:
 
@@ -1202,7 +1235,11 @@ CMakeFiles/3.28.3/CMakeCCompiler.cmake:
 
 /usr/include/errno.h:
 
-/usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h:
+/usr/include/c++/13/optional:
+
+/usr/include/c++/13/bits/vector.tcc:
+
+/usr/include/c++/13/cctype:
 
 /usr/include/c++/13/cerrno:
 
@@ -1326,16 +1363,6 @@ CMakeFiles/3.28.3/CMakeCCompiler.cmake:
 
 /usr/include/c++/13/string:
 
-/usr/share/cmake-3.28/Modules/CMakeDetermineCompiler.cmake:
-
-/usr/include/c++/13/map:
-
-/usr/include/c++/13/string_view:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake:
-
-/usr/include/features-time64.h:
-
 /usr/include/c++/13/bits/list.tcc:
 
 /usr/include/c++/13/bits/nested_exception.h:
@@ -1361,6 +1388,8 @@ CMakeFiles/3.28.3/CMakeCCompiler.cmake:
 /usr/include/ctype.h:
 
 /usr/include/c++/13/bits/atomic_wait.h:
+
+/usr/include/c++/13/future:
 
 /usr/include/features.h:
 
@@ -1473,11 +1502,3 @@ CMakeFiles/3.28.3/CMakeCCompiler.cmake:
 /usr/include/c++/13/bits/ranges_util.h:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtGui/qfontmetrics.h:
-
-/usr/include/c++/13/bits/std_function.h:
-
-/usr/include/c++/13/bits/char_traits.h:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h:
