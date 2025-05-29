@@ -1,3 +1,5 @@
+# Repositório de arquivos no github: https://github.com/Pieri1/Dashboard-Sistemas-Operacionais
+
 # ✅ Checklist de Progresso – Projeto A (Dashboard)
 
 ## 🎯 Funcionalidades Principais
