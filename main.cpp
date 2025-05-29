@@ -6,16 +6,16 @@
 #include "model/SystemInfo.h"
 
 int main(int argc, char *argv[]) {
+    // Registra para uso em sinais entre threads
     qRegisterMetaType<std::vector<ProcessInfo>>("std::vector<ProcessInfo>");
     qRegisterMetaType<SystemInfo>("SystemInfo");
+
     QApplication app(argc, argv);
 
-    MainWindow window(nullptr, nullptr); // Crie sem controller por enquanto
+    MainWindow window(nullptr, nullptr);
     DashboardController controller(&window);
-    window.setDashboardController(&controller); // Defina o ponteiro depois
-    window.show();
-
-    controller.start();
+    window.setDashboardController(&controller); 
+    window.show(); 
 
     return app.exec();
 }

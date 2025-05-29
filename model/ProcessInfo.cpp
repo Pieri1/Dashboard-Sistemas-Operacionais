@@ -1,7 +1,11 @@
 #include "ProcessInfo.h"
 
+// ProcessInfo serve para armazenar informações individuais de cada processo.
+
+// Inicializa todos os atributos do processo, possui getters e setters.
 ProcessInfo::ProcessInfo(int pid, const std::string& name, const std::string& user, double cpuUsage, double memoryMB, int threads, const std::string& state)
     : pid(pid), name(name), user(user), cpuUsage(cpuUsage), memoryMB(memoryMB), threads(threads), state(state) {}
+
 int ProcessInfo::getPid() const {
     return pid;
 }
@@ -57,5 +61,3 @@ std::string ProcessInfo::getState() const {
 void ProcessInfo::setState(const std::string& state) {
     this->state = state;
 }
-
-

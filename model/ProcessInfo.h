@@ -3,31 +3,31 @@
 
 #include <string>
 
-
 class ProcessInfo {
 public:
     ProcessInfo(int pid = 0, const std::string& name = "", const std::string& user = "",
                 double cpuUsage = 0.0, double memoryMB = 0.0, int threads = 0, const std::string& state = "");
 
-    int getPid() const;
-    void setPid(int pid);
 
-    std::string getName() const;
-    void setName(const std::string& name);
+    int getPid() const;                     
+    void setPid(int pid);                   
 
-    std::string getUser() const;
-    void setUser(const std::string& user);
+    std::string getName() const;           
+    void setName(const std::string& name);  
 
-    double getCpuUsage() const;
-    void setCpuUsage(double cpuUsage);
+    std::string getUser() const;            
+    void setUser(const std::string& user);  
 
-    double getMemoryMB() const;
-    void setMemoryMB(double memoryMB);
+    double getCpuUsage() const;             
+    void setCpuUsage(double cpuUsage);   
 
-    int getThreads() const;
-    void setThreads(int threads);
+    double getMemoryMB() const;            
+    void setMemoryMB(double memoryMB);     
 
-    std::string getState() const;
+    int getThreads() const;             
+    void setThreads(int threads);       
+
+    std::string getState() const;        
     void setState(const std::string& state);
 
 private:
@@ -38,7 +38,6 @@ private:
     double memoryMB;
     int threads;
     std::string state;
-    ProcessInfo getProcessDetails(int pid);
 };
 
 #endif

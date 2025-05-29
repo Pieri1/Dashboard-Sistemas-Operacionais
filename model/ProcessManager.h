@@ -6,27 +6,28 @@
 #include "model/ProcessInfo.h"
 #include "model/SystemInfo.h"
 
+//Struct para guardar detalhes avançados de um processo (Mostrados no dialog)
 struct ProcessDetails {
-    int pid;
-    std::string name;
-    std::string user;
-    std::string state;
-    int threads;
-    int ppid;
-    long priority;
-    double memoryMB;         // RAM residente (VmRSS)
-    double memoryVirtualMB;  // Memória virtual (VmSize)
-    double cpuTimeSeconds;   // Tempo de CPU em segundos
+    int pid;             
+    std::string name;     
+    std::string user;        
+    std::string state;    
+    int threads;         
+    int ppid;            
+    long priority;          
+    double memoryMB;       
+    double memoryVirtualMB;  
+    double cpuTimeSeconds; 
     int openFileCount;
-    int pageCount;           // Total de páginas de memória
+    int pageCount;
 };
 
 class ProcessManager {
 public:
-    ProcessManager();
-    std::vector<ProcessInfo> getProcessList();
-    SystemInfo getSystemInfo();
-    ProcessDetails getProcessDetails(int pid);
+    ProcessManager();               
+    std::vector<ProcessInfo> getProcessList();        
+    SystemInfo getSystemInfo();                     
+    ProcessDetails getProcessDetails(int pid);       
 };
 
 #endif

@@ -1,6 +1,8 @@
 #include "view/ProcessDetailDialog.h"
 #include "ui_ProcessDetailDialog.h"
 
+// ProcessDetailDialog é a interface de detalhes de um processo individual
+
 ProcessDetailDialog::ProcessDetailDialog(QWidget *parent) 
     : QDialog(parent), ui(new Ui::ProcessDetailDialog) {
     ui->setupUi(this);
@@ -8,6 +10,7 @@ ProcessDetailDialog::ProcessDetailDialog(QWidget *parent)
     connect(ui->btnClose, &QPushButton::clicked, this, &ProcessDetailDialog::close);
 }
 
+// Atualiza os campos com uma lista recebida
 void ProcessDetailDialog::setProcessDetails(const ProcessDetails& d) {
     ui->lblPId->setText("PID: " + QString::number(d.pid));
     ui->lblName->setText("Nome: " + QString::fromStdString(d.name));
@@ -23,7 +26,7 @@ void ProcessDetailDialog::setProcessDetails(const ProcessDetails& d) {
     ui->lblPages->setText("Páginas: " + QString::number(d.pageCount));
 }
 
-
+//Libera recursos da interface
 ProcessDetailDialog::~ProcessDetailDialog()
 {
     delete ui;

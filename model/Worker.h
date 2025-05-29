@@ -2,7 +2,7 @@
 #define WORKER_H
 
 #include <QObject>
-#include <QTimer> // Adicione esta linha
+#include <QTimer>
 #include "model/ProcessManager.h"
 
 class Worker : public QObject {
@@ -19,8 +19,8 @@ public slots:
     void updateData();
 
 private:
-    ProcessManager* manager;
-    QTimer* timer;
+    ProcessManager* manager; 
+    QTimer* timer;    
 };
 
-#endif // WORKER_H
+#endif

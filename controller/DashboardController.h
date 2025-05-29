@@ -14,18 +14,13 @@ class DashboardController : public QObject {
 public:
     explicit DashboardController(MainWindow* mainWindow, QObject* parent = nullptr);
     ~DashboardController();
-
-    void start();
-    void updateData();
     void showProcessDetails(int pid);
 
 private:
     MainWindow* view;
     ProcessManager processManager;
-
     QThread* workerThread;
     Worker* worker;
-
     QTimer timer;
 };
 

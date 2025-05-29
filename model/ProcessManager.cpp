@@ -12,13 +12,17 @@
 #include <unordered_map>
 #include <vector>
 
+// ProcessManager serve para coletar informações brutas sobre o sistema e processos
+
 namespace fs = std::filesystem;
 
 ProcessManager::ProcessManager() {}
 
+// Variáveis globais para armazenar tempos anteriores de CPU dos processos
 std::unordered_map<int, unsigned long> previousProcTimes;
 unsigned long previousTotalTime = 0;
 
+// Função para obter o tempo total de CPU do sistema
 unsigned long getTotalCpuTime() {
     std::ifstream file("/proc/stat");
     std::string line;
@@ -33,6 +37,7 @@ unsigned long getTotalCpuTime() {
     return total;
 }
 
+// Função para obter o tempo de CPU de um processo individual
 unsigned long getProcessCpuTime(int pid) {
     std::ifstream file("/proc/" + std::to_string(pid) + "/stat");
     if (!file.is_open()) return 0;
@@ -44,11 +49,13 @@ unsigned long getProcessCpuTime(int pid) {
     return utime + stime;
 }
 
+// Retorna a lista de todos processos do sistema
 std::vector<ProcessInfo> ProcessManager::getProcessList() {
     std::vector<ProcessInfo> processList;
 
     unsigned long currentTotalTime = getTotalCpuTime();
 
+    // Passa por todos os diretórios em /proc
     for (const auto& entry : fs::directory_iterator("/proc")) {
         if (!entry.is_directory()) continue;
 
@@ -57,6 +64,7 @@ std::vector<ProcessInfo> ProcessManager::getProcessList() {
 
         int pid = std::stoi(pidStr);
 
+        // Lê /proc/[pid]/status
         std::string statusPath = "/proc/" + pidStr + "/status";
         std::ifstream statusFile(statusPath);
         if (!statusFile.is_open()) continue;
@@ -83,6 +91,7 @@ std::vector<ProcessInfo> ProcessManager::getProcessList() {
             }
         }
 
+        // Pega usuário dono do processo
         struct stat info;
         std::string procPath = "/proc/" + pidStr;
         if (stat(procPath.c_str(), &info) != 0) continue;
@@ -91,6 +100,7 @@ std::vector<ProcessInfo> ProcessManager::getProcessList() {
         struct passwd* pw = getpwuid(info.st_uid);
         if (pw) user = pw->pw_name;
 
+        // Calcula o uso de CPU
         unsigned long currentProcTime = getProcessCpuTime(pid);
         unsigned long lastProcTime = previousProcTimes[pid];
         unsigned long deltaProc = currentProcTime - lastProcTime;
@@ -102,6 +112,7 @@ std::vector<ProcessInfo> ProcessManager::getProcessList() {
 
         previousProcTimes[pid] = currentProcTime;
 
+        // Cria o objeto ProcessInfo e a lista de processos
         ProcessInfo p(pid, name, user, cpuUsage, memoryMB, threads, state);
         processList.push_back(p);
     }
@@ -111,9 +122,11 @@ std::vector<ProcessInfo> ProcessManager::getProcessList() {
     return processList;
 }
 
+// Retorna informações globais do sistema
 SystemInfo ProcessManager::getSystemInfo() {
     SystemInfo info{};
 
+    // Lê informações do /proc/stat (uso de cpu)
     std::ifstream file("/proc/stat");
     std::string line;
     std::getline(file, line);
@@ -127,6 +140,7 @@ SystemInfo ProcessManager::getSystemInfo() {
     info.cpuUsagePercent = (double)busy / total * 100.0;
     info.cpuIdlePercent = (double)(idle + iowait) / total * 100.0;
 
+    // Lê informações do /proc/meminfo (uso de memória)
     std::ifstream memFile("/proc/meminfo");
     std::string memLine;
     unsigned long memTotal = 0, memFree = 0, buffers = 0, cached = 0;
@@ -145,6 +159,7 @@ SystemInfo ProcessManager::getSystemInfo() {
     info.ramUsagePercent = (double)memUsed / memTotal * 100.0;
     info.ramFreeMB = memFree / 1024.0;
 
+    // Conta o número de processos
     int count = 0;
     for (const auto& entry : fs::directory_iterator("/proc")) {
         if (entry.is_directory()) {
@@ -159,10 +174,12 @@ SystemInfo ProcessManager::getSystemInfo() {
     return info;
 }
 
+// Retorna detalhes mais específicos de um processo individual por PID
 ProcessDetails ProcessManager::getProcessDetails(int pid) {
     ProcessDetails details{};
     details.pid = pid;
 
+    // Lê informações do /proc/[pid]/status
     std::ifstream statusFile("/proc/" + std::to_string(pid) + "/status");
     std::string line;
     while (std::getline(statusFile, line)) {
@@ -194,16 +211,14 @@ ProcessDetails ProcessManager::getProcessDetails(int pid) {
             details.memoryVirtualMB = kb / 1024.0;
         }
         else if (line.rfind("RssAnon:", 0) == 0) {
-            // Exemplo de contagem de páginas anônimas (opcional)
             std::istringstream iss(line.substr(8));
             int kb;
             iss >> kb;
             details.pageCount += kb / 4; // 1 página = 4 KB
         }
-        // Você pode somar outras páginas (RssFile, RssShmem, etc) se quiser detalhar mais
     }
 
-    // Tempo de CPU
+    // Lê informações do /proc/[pid]/stat (tempo de CPU)
     std::ifstream statFile("/proc/" + std::to_string(pid) + "/stat");
     std::string token;
     for (int i = 1; i <= 13; ++i) statFile >> token;
@@ -212,11 +227,11 @@ ProcessDetails ProcessManager::getProcessDetails(int pid) {
     long ticks_per_sec = sysconf(_SC_CLK_TCK);
     details.cpuTimeSeconds = double(utime + stime) / ticks_per_sec;
 
-    // Prioridade
+    // Lê prioridade do processo
     for (int i = 15; i <= 17; ++i) statFile >> token;
     statFile >> details.priority;
 
-    // Arquivos abertos
+    // Conta o número de arquivos abertos do processo
     std::string fdPath = "/proc/" + std::to_string(pid) + "/fd";
     int openFiles = 0;
     try {

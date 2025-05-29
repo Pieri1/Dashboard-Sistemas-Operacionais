@@ -3,8 +3,8 @@
 ## 🎯 Funcionalidades Principais
 
 ### 🔹 Monitoramento de Processos
-- [ ] Exibir dados globais do processador (uso da CPU, tempo ocioso)
-- [ ] Exibir total de processos e threads em execução
+- [X] Exibir dados globais do processador (uso da CPU, tempo ocioso)
+- [X] Exibir total de processos e threads em execução
 - [X] Listar todos os processos existentes
 - [X] Mostrar o usuário associado a cada processo
 - [X] Mostrar informações sobre os threads de cada processo
@@ -13,9 +13,9 @@
 ### 🔹 Monitoramento de Memória
 - [X] Exibir uso global da memória RAM (usada, livre, percentual)
 - [X] Exibir uso de memória virtual (swap)
-- [ ] Exibir informações detalhadas de memória por processo:
+- [X] Exibir informações detalhadas de memória por processo:
   - [X] Total de memória alocada
-  - [ ] Páginas de memória (total, código, heap, stack)
+  - [X] Páginas de memória (total, código, heap, stack)
 - [X] Detalhamento em tela ou aba separada (com botão de retorno à tela principal)
 
 ---
@@ -24,18 +24,8 @@
 
 - [X] Atualizar os dados automaticamente a cada 5 segundos
 - [X] Permitir visualizar informações globais e individuais dos processos
-- [ ] Apresentar dados processados (nada de saída crua)
+- [X] Apresentar dados processados (nada de saída crua)
 - [X] Não usar comandos shell como `ps`, `ls`, `du`, etc
 - [X] Utilizar APIs ou leitura direta do sistema operacional (ex: `/proc` no Linux)
-- [ ] Implementar o projeto com **software multitarefa** (ex: threads)
+- [X] Implementar o projeto com **software multitarefa** (ex: threads)
 - [X] Seguir o padrão de projeto **MVC (Model-View-Controller)**
-
-
-## Resta fazer
-- Tratamento de erro (sem permissao), para dados de processos
-- Mostrar tempo ocioso da CPU e threads em execucao
-- Mostrar informacoes a mais da pagina (codigo, heap, stack)
-- Verificar se saidas estao corretas
-- Criacao de Threads
-- Criacao de comentarios
-- Criacao do PDF de Documentacao

@@ -6,16 +6,20 @@
 #include <QDateTime>
 #include "controller/DashboardController.h"
 
+// MainWindow é a interface principal do programa
+
 MainWindow::MainWindow(QWidget *parent, DashboardController* controller)
     : QMainWindow(parent), ui(new Ui::MainWindow), dashboardController(controller) {
     ui->setupUi(this);
     connect(ui->tblProcess, &QTableWidget::cellDoubleClicked, this, &MainWindow::onProcessRowDoubleClicked);
 }
 
+// Destrutor
 MainWindow::~MainWindow() {
     delete ui;
 }
 
+// Atualiza a tabela de processos na interface com a lista recebida
 void MainWindow::updateProcessList(const std::vector<ProcessInfo>& processes) {
     ui->tblProcess->setRowCount(processes.size());
 
@@ -31,11 +35,11 @@ void MainWindow::updateProcessList(const std::vector<ProcessInfo>& processes) {
         ui->tblProcess->setItem(i, 6, new QTableWidgetItem(QString::fromStdString(p.getState())));
     }
 
-    // Opcional: redimensionar colunas para caberem no conteúdo
     ui->tblProcess->resizeColumnsToContents();
     ui->lblUpdate->setText(QString("Última atualização: %1").arg(QDateTime::currentDateTime().toString("dd/MM/yyyy HH:mm:ss")));
 }
 
+// Atualiza os labels de informações do sistema
 void MainWindow::updateSystemInfo(const SystemInfo& info) {
     ui->lblCpuUse->setText(QString("Uso de CPU: %1%").arg(QString::number(info.cpuUsagePercent, 'f', 2)));
     ui->lblCpuIdle->setText(QString("CPU Ociosa: %1%").arg(QString::number(info.cpuIdlePercent, 'f', 2)));
@@ -44,6 +48,7 @@ void MainWindow::updateSystemInfo(const SystemInfo& info) {
     ui->lblTotalProc->setText(QString("Processos: %1").arg(info.processCount));
 }
 
+//Solicita para que os detalhes de um processo especifico sejam exibidos
 void MainWindow::onProcessRowDoubleClicked(int row, int column) {
     if (row < 0 || row >= ui->tblProcess->rowCount()) return;
 
@@ -53,6 +58,7 @@ void MainWindow::onProcessRowDoubleClicked(int row, int column) {
     dashboardController->showProcessDetails(pid);
 }
 
+// Define o ponteiro para o controller do dashboard
 void MainWindow::setDashboardController(DashboardController* controller) {
     dashboardController = controller;
 }

@@ -1,5 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
+
 #include <QMainWindow>
 #include <vector>
 #include "model/ProcessInfo.h"
@@ -9,7 +10,7 @@ namespace Ui {
 class MainWindow;
 }
 
-class DashboardController; // Forward declaration
+class DashboardController;
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
@@ -26,8 +27,8 @@ private slots:
     void onProcessRowDoubleClicked(int row, int column);
 
 private:
-    Ui::MainWindow *ui;
-    DashboardController* dashboardController; // Adicione esta linha
+    Ui::MainWindow *ui;                    
+    DashboardController* dashboardController; 
 };
 
 #endif
